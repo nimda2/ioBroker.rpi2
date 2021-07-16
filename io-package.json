@@ -2,6 +2,18 @@
     "common": {
         "name": "rpi2",
         "title": "RPI-Monitor",
+        "titleLang": {
+            "en": "RPI-Monitor",
+            "de": "RPI-Monitor",
+            "ru": "RPI-монитор",
+            "pt": "RPI-Monitor",
+            "nl": "RPI-monitor",
+            "fr": "RPI-Moniteur",
+            "it": "RPI-Monitor",
+            "es": "Monitor RPI",
+            "pl": "Monitor RPI",
+            "zh-cn": "RPI-监视器"
+        },
         "desc": {
             "en": "RPI-Monitor",
             "de": "RPI-Monitor",
@@ -126,7 +138,7 @@
             }
         },
         "mode": "daemon",
-        "platform": "javascript/Node.js",
+        "platform": "Javascript/Node.js",
         "os": [
             "linux"
         ],
@@ -174,6 +186,9 @@
             "minHeight": 600,
             "height": 600
         },
+        "connectionType": "local",
+        "dataSource": "poll",
+        "tier": 2,
         "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rpi2/master/admin/rpi.png"
     },
     "native": {
