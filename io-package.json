@@ -26,8 +26,20 @@
             "pl": "Monitor RPI",
             "zh-cn": "RPI-监视器"
         },
-        "version": "1.3.0",
+        "version": "1.3.1",
         "news": {
+            "1.3.1": {
+                "en": "js-controller 3.3 warnings prevented",
+                "de": "js-controller 3.3 Warnungen verhindert",
+                "ru": "js-controller 3.3 предупреждения предотвращены",
+                "pt": "Avisos do js-controller 3.3 evitados",
+                "nl": "js-controller 3.3 waarschuwingen voorkomen",
+                "fr": "js-controller 3.3 avertissements empêchés",
+                "it": "js-controller 3.3 avvisi impediti",
+                "es": "advertencias de js-controller 3.3 prevenidas",
+                "pl": "js-controller 3.3 zablokowano ostrzeżenia",
+                "zh-cn": "js-controller 3.3 警告被阻止"
+            },
             "1.3.0": {
                 "en": "Add support for DHTxx/AM23xx Sensors, Configure internal Pull UP/Down Resistor, Optimizations and fixes",
                 "de": "Unterstützung für DHTxx/AM23xx-Sensoren hinzufügen, internen Pull-Up/Down-Widerstand konfigurieren, Optimierungen und Korrekturen",
