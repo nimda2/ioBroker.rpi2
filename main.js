@@ -30,7 +30,7 @@ const adapter = new utils.Adapter({
                         adapter.log.debug('Skip root object ' + id);
                         continue;
                     }
-                  
+
                     adapter.log.debug('Remove ' + id + ': ' + id);
 
                     adapter.delObject(id, (res, err) => {
@@ -55,7 +55,7 @@ const adapter = new utils.Adapter({
                 adapter.subscribeStates('*');
                 main();
              });
-        }        
+        }
     },
     stateChange: function (id, state) {
         adapter.log.debug('stateChange for ' + id + ' found state = ' + JSON.stringify(state));
@@ -335,7 +335,7 @@ function parser() {
                             value = parseFloat(value);
                             const r = new RegExp(/^\d+\.\d+$/);
                             if (r.exec(value)) {
-                                value = value.toFixed(2);
+                                value = parseFloat(value.toFixed(2));
                             }
                         }
 
@@ -436,7 +436,7 @@ async function syncPort(port, data) {
             }
         });
     }
-    
+
     const stateName = 'gpio.' + port + '.state';
     if (data.enabled && data.isGpio) {
         const obj = {
@@ -660,9 +660,9 @@ function setupGpio(gpioPorts, buttonPorts) {
                 // And start button processing
                 gpioButtons.init().catch(err => {
                     adapter.log.error(`An error occurred during buttons init(). ${err.message}`);
-                });                        
+                });
             }
-        }    
+        }
     }
 }
 
@@ -709,16 +709,16 @@ function setupDht(dhtPorts) {
     }
 }
 
-async function initPorts() {    
+async function initPorts() {
     if (adapter.config.gpios && adapter.config.gpios.length) {
         let gpioPorts = [];
         let buttonPorts = [];
         let dhtPorts = [];
-    
+
         for (let port = 0; port < adapter.config.gpios.length; port++) {
             if (adapter.config.gpios[port]) {
                 /* Ensure backwards compatibility of property .input
-                * in older versions, it was true for "in" and false for "out" 
+                * in older versions, it was true for "in" and false for "out"
                 * in newer versions, it is "in", "out", "outlow" or "outhigh"
                 * Do this now so we only have to check for newer versions everywhere else.
                 */
