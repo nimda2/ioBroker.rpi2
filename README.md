@@ -148,7 +148,7 @@ Connect such a sensor to a GPIO pin as described on the [node-dht-sensor](https:
 
 ## Changelog
 
-### __WORK IN PROGRESS__
+### 1.3.0 (2021-07-16)
 * (asgothian) Fix to get CPU frequencies also on Raspi 4
 * (raintor) Add support for DHTxx/AM23xx Sensors
 * (raintor) Configure internal Pull UP/Down Resistor
