@@ -5,7 +5,7 @@
     "Buttons are wired pull up": "Die Tasten sind hochgezogen",
     "CPU:": "CPU",
     "Enable": "Enable",
-    "Enabled": "Aktiv",
+    "Enabled": "Aktiviert",
     "GPIOs": "GPIOs",
     "Input debounce period (ms)": "Entprellungsperiode (ms) eingeben",
     "Inputs are wired pull up": "Die Eingänge sind hochgezogen",
