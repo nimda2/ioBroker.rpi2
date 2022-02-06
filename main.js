@@ -645,6 +645,7 @@ function setupGpio(gpioPorts, buttonPorts) {
             } catch (e) {
                 gpioButtons = null;
                 adapter.log.error('Cannot initialize GPIO Buttons: ' + e);
+                console.error(e);
             }
 
             // Setup events for buttons - only has to be done once no matter how many buttons we have.
