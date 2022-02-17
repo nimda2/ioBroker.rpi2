@@ -574,6 +574,10 @@ function setupGpio(gpioPorts, buttonPorts) {
     } catch (e) {
         gpio = null;
         adapter.log.error('Cannot initialize/setMode GPIO: ' + e);
+        console.error(e);
+        if (e.message.includes('NODE_MODULE_VERSION')) {
+            return adapter.terminate("A dependency requires a rebuild.", 13);
+        }
     }
 
     if (gpio) {
@@ -646,6 +650,9 @@ function setupGpio(gpioPorts, buttonPorts) {
                 gpioButtons = null;
                 adapter.log.error('Cannot initialize GPIO Buttons: ' + e);
                 console.error(e);
+                if (e.message.includes('NODE_MODULE_VERSION')) {
+                    return adapter.terminate("A dependency requires a rebuild.", 13);
+                }
             }
 
             // Setup events for buttons - only has to be done once no matter how many buttons we have.
