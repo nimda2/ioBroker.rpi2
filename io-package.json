@@ -296,31 +296,43 @@
                 "post": ""
             }
         },
-        "sdcard": {
-            "sdcard_root_total": {
-                "command": "df /",
-                "regexp": "\\S+\\s+(\\d+).*\\/$",
-                "post": "$1/1024",
-                "multiline": true
-            },
-            "sdcard_boot_total": {
-                "command": "df /boot",
-                "regexp": "\\S+\\s+(\\d+).*\\/boot$",
-                "post": "$1/1024",
-                "multiline": true
-            },
-            "sdcard_root_used": {
-                "command": "df /",
-                "regexp": "\\S+\\s+\\d+\\s+(\\d+).*\\/$",
-                "post": "$1/1024",
-                "multiline": true
-            },
-            "sdcard_boot_used": {
-                "command": "df /boot",
-                "regexp": "\\S+\\s+\\d+\\s+(\\d+).*\\/boot$",
-                "post": "$1/1024",
-                "multiline": true
-            }
+          "sdcard": {
+      "sdcard_root_total": {
+        "command": "df /",
+        "regexp": "\\S+\\s+(\\d+).*\\/$",
+        "post": "$1/1024",
+        "multiline": true
+      },
+      "sdcard_boot_total": {
+        "command": "df /boot",
+        "regexp": "\\S+\\s+(\\d+).*\\/boot$",
+        "post": "$1/1024",
+        "multiline": true
+      },
+      "sdcard_usb_total": {
+        "command": "df /dev/sda1",
+        "regexp": "\\S+\\s+(\\d+).*\\/dev/sda1$",
+        "post": "$1/1024",
+        "multiline": true
+      },
+      "sdcard_root_used": {
+        "command": "df /",
+        "regexp": "\\S+\\s+\\d+\\s+(\\d+).*\\/$",
+        "post": "$1/1024",
+        "multiline": true
+      },
+      "sdcard_boot_used": {
+        "command": "df /boot",
+        "regexp": "\\S+\\s+\\d+\\s+(\\d+).*\\/boot$",
+        "post": "$1/1024",
+        "multiline": true
+      },
+      "sdcard_usb_used": {
+        "command": "df /dev/sda1",
+        "regexp": "\\S+\\s+\\d+\\s+(\\d+).*\\/dev/sda1$",
+        "post": "$1/1024",
+        "multiline": true
+      }
         },
         "swap": {
             "swap_total": {
